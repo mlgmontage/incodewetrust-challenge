@@ -11,9 +11,12 @@ export const Card = styled.div`
 `
 
 export const Button = styled.button`
+  font-size: inherit;
+  padding: 1rem 1.5rem;
+
+  border: 1px solid var(--light-color);
   background-color: transparent;
-  padding: 1.5rem 1rem;
-  border: 1px solid var(--ligth-color);
+  cursor: pointer;
 `
 
 export const Heading = styled.h1`
