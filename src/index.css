@@ -3,7 +3,7 @@
   src: url(shared/assets/04B_30__.TTF) format("truetype");
 }
 
-/* NOTE: This file is only for base styles and variables. See `/shared/ui/index.ts` for styled-components */
+/* NOTE: This file is only for base styles, variables and utils. See `/shared/ui/index.ts` for styled-components */
 
 :root {
   --brand-color: hsl(16, 88%, 54%);
@@ -20,4 +20,12 @@ body {
 
   font-family: var(--text-font);
   font-size: 16px;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-light {
+  color: var(--light-color);
 }

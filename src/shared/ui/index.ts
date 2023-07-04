@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 960px ;
+  max-width: 960px ;
   margin-inline: auto;
 `
 
@@ -10,8 +10,19 @@ export const Card = styled.div`
   border: 1px solid var(--brand-color);
 `
 
+export const Banner = styled.h1`
+  text-align: center;
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+`
+
 export const Button = styled.button`
-  font-size: inherit;
+  color: var(--brand-color);
+
+  font-size: 1rem;
+  font-weight: 700;
   padding: 1rem 1.5rem;
 
   border: 1px solid var(--light-color);
@@ -19,8 +30,17 @@ export const Button = styled.button`
   cursor: pointer;
 `
 
+export const ButtonGroup = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 1rem;
+`
+
 export const Heading = styled.h1`
   font-family: var(--brand-font);
   color: var(--brand-color);
   text-shadow: 1px 1px var(--dark-color);
+  
+  margin-block: 3rem;
 `

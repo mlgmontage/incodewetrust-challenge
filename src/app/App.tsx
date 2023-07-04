@@ -1,20 +1,13 @@
-import { useEffect } from "react"
-import { Button, Card, Container, Heading } from "../shared/ui"
-import { chuckApi } from "../shared/api"
+import { Container, Heading } from "../shared/ui"
+import JokeBanner from "../features/JokeBanner"
 
 const App = () => {
 
-  useEffect(() => {
-    chuckApi.getJoke().then(({ data }) => {
-      console.log(data.value);
-    })
-  }, [])
-
   return (
     <Container>
-      <Heading>InCodeWeTrust</Heading>
-      <Button>Play</Button>
-      <Card> inser joke here</Card>
+      <Heading className="center">InCodeWeTrust</Heading>
+      <JokeBanner />
+      <Heading className="center">Favourite</Heading>
     </Container>
   )
 }
