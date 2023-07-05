@@ -30,7 +30,6 @@ const favouriteJokesModel = createSlice({
           state.shift()
         state.push(payload)
       }
-
     },
     deleteJoke: (state, { payload }: PayloadAction<number>) => {
       state.splice(payload, 1)
