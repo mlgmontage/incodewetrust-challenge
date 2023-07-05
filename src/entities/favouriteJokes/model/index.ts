@@ -1,10 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../../app/store";
 
-type FavouritesT = {
+type FavouriteT = {
   id: string
   joke: string
-}[]
+}
+
+type FavouritesT = FavouriteT[]
 
 const initialState: FavouritesT = [
   { id: '1', joke: 'joke 1' },
@@ -16,9 +18,15 @@ const initialState: FavouritesT = [
 const favouriteJokesModel = createSlice({
   name: 'favouriteJokes',
   initialState,
-  reducers: {}
+  reducers: {
+    createJoke: (state, { payload }: PayloadAction<FavouriteT>) => {
+      state.push(payload)
+    }
+  }
 })
 
 export default favouriteJokesModel.reducer
+
+export const { createJoke } = favouriteJokesModel.actions
 
 export const favouriteJokesSelector = (state: RootState) => state.favouriteJokes

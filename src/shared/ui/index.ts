@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const Card = styled.div`
   padding: 1rem;
   border: 1px solid var(--brand-color);
+  border-radius: var(--rounded);
 `
 
 export const Banner = styled.h1`
@@ -26,6 +27,7 @@ export const Button = styled.button`
   padding: 1rem 1.5rem;
 
   border: 1px solid var(--light-color);
+  border-radius: var(--rounded);
   background-color: transparent;
   cursor: pointer;
 `
@@ -35,6 +37,7 @@ export const ButtonGroup = styled.div`
   align-items: center;
   justify-content: center;
   margin-block: 1rem;
+  gap: .5rem;
 `
 
 export const Heading = styled.h1`

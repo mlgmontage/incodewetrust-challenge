@@ -12,6 +12,8 @@
 
   --text-font: 'Courier New', Courier, monospace;
   --brand-font: "04b_30";
+
+  --rounded: 4px;
 }
 
 body {
