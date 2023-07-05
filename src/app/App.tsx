@@ -1,16 +1,10 @@
-import { Container, Heading } from "../shared/ui"
-import JokeBanner from "../widgets/JokeBanner"
+import Main from "../pages/Main"
 import { withProviders } from "./providers/with-providers"
-import FavouriteJokes from "../features/FavouriteJokes"
 
 const App = () => {
 
   return (
-    <Container>
-      <Heading className="center">InCodeWeTrust</Heading>
-      <JokeBanner />
-      <FavouriteJokes />
-    </Container>
+    <Main />
   )
 }
 

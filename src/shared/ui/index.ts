@@ -47,3 +47,9 @@ export const Heading = styled.h1`
   
   margin-block: 3rem;
 `
+
+export const CardsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+`
