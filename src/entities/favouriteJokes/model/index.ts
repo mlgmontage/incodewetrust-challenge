@@ -8,6 +8,8 @@ type FavouriteT = {
 
 type FavouritesT = FavouriteT[]
 
+const JOKE_LIMIT = 10
+
 const initialState: FavouritesT = []
 
 const favouriteJokesModel = createSlice({
@@ -17,12 +19,15 @@ const favouriteJokesModel = createSlice({
     createJoke: (state, { payload }: PayloadAction<FavouriteT>) => {
       const isEmpty = !payload.id.length
       const isDuplicate = state.find(joke => joke.id === payload.id)
+      const isExceeded = state.length > JOKE_LIMIT
 
       // Disallowing empty and duplicate
       if (isEmpty || isDuplicate) {
         throw new Error('Cannot create joke')
       }
       else {
+        if (isExceeded)
+          state.shift()
         state.push(payload)
       }
 
