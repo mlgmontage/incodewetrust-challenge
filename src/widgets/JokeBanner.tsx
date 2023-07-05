@@ -14,7 +14,7 @@ const JokeBanner = () => {
 
   return (<div>
     <Banner>
-      {joke.text.length ? joke.text : (<div className="text-light">Click to fetch joke</div>)}
+      {joke.text.length ? joke.text : (<div className="text-light">Click "GET" to fetch joke</div>)}
     </Banner>
 
     <ButtonGroup>

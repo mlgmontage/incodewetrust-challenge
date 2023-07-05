@@ -14,6 +14,7 @@ const FavouriteJokes = () => {
 
   return (<div>
     <Heading className="center">Favourite</Heading>
+    {!jokes.length && <h1 className="center text-light">Empty</h1>}
     <CardsGrid>
       {jokes.map(({ id, joke }) => (<Card key={id}>{joke}</Card>))}
     </CardsGrid>

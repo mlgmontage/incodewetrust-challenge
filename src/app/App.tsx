@@ -1,5 +1,5 @@
 import { Container, Heading } from "../shared/ui"
-import JokeBanner from "../features/JokeBanner"
+import JokeBanner from "../widgets/JokeBanner"
 import { withProviders } from "./providers/with-providers"
 import FavouriteJokes from "../features/FavouriteJokes"
 

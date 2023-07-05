@@ -8,20 +8,26 @@ type FavouriteT = {
 
 type FavouritesT = FavouriteT[]
 
-const initialState: FavouritesT = [
-  { id: '1', joke: 'joke 1' },
-  { id: '2', joke: 'joke 2' },
-  { id: '3', joke: 'joke 3' },
-]
-
+const initialState: FavouritesT = []
 
 const favouriteJokesModel = createSlice({
   name: 'favouriteJokes',
   initialState,
   reducers: {
     createJoke: (state, { payload }: PayloadAction<FavouriteT>) => {
-      state.push(payload)
+      const isEmpty = !payload.id.length
+      const isDuplicate = state.find(joke => joke.id === payload.id)
+
+      // Disallowing empty and duplicate
+      if (isEmpty || isDuplicate) {
+        throw new Error('Cannot create joke')
+      }
+      else {
+        state.push(payload)
+      }
+
     }
+
   }
 })
 
