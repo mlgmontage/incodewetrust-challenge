@@ -1,8 +1,15 @@
+import { useDispatch } from "react-redux"
 import { Button } from "../shared/ui"
+import { deleteJoke } from "../entities/favouriteJokes/model"
 
-const DeleteJoke = () => {
+type Props = {
+  index: number
+}
 
-  return (<Button>x</Button>)
+const DeleteJoke: React.FC<Props> = ({ index }) => {
+  const dispatch = useDispatch()
+
+  return (<Button onClick={() => dispatch(deleteJoke(index))}>x</Button>)
 }
 
 export default DeleteJoke 

@@ -26,13 +26,15 @@ const favouriteJokesModel = createSlice({
         state.push(payload)
       }
 
+    },
+    deleteJoke: (state, { payload }: PayloadAction<number>) => {
+      state.splice(payload, 1)
     }
-
   }
 })
 
 export default favouriteJokesModel.reducer
 
-export const { createJoke } = favouriteJokesModel.actions
+export const { createJoke, deleteJoke } = favouriteJokesModel.actions
 
 export const favouriteJokesSelector = (state: RootState) => state.favouriteJokes
