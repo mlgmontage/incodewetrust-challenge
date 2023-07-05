@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 960px ;
   margin-inline: auto;
+  padding: 1rem;
 `
 
 export const Card = styled.div`
@@ -54,4 +55,8 @@ export const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `

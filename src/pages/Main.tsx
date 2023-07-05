@@ -10,6 +10,7 @@ const Main = () => {
 
   return (
     <Container>
+      <div className="center">by @mlgmontage</div>
       <Heading className="center">InCodeWeTrust</Heading>
       <JokeBanner />
       <div>
