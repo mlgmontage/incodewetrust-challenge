@@ -29,12 +29,15 @@ const favouriteJokesModel = createSlice({
     },
     deleteJoke: (state, { payload }: PayloadAction<number>) => {
       state.splice(payload, 1)
+    },
+    clearJokes: (state) => {
+      return []
     }
   }
 })
 
 export default favouriteJokesModel.reducer
 
-export const { createJoke, deleteJoke } = favouriteJokesModel.actions
+export const { createJoke, deleteJoke, clearJokes } = favouriteJokesModel.actions
 
 export const favouriteJokesSelector = (state: RootState) => state.favouriteJokes
